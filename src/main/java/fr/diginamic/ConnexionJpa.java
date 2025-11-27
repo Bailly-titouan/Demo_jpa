@@ -13,10 +13,14 @@ public class ConnexionJpa
         EntityTransaction transaction = em.getTransaction();
 
         transaction.begin();
-        Region region = new Region();
-        region.setNom("Boulette");
-        em.persist(region);
-        System.out.println(region.getId());
+
+        TypedQuery<Region> query = em.createQuery("SELECT h FROM Region h", Region.class);
+
+        for (Region region : query.getResultList())
+        {
+            System.out.println(region.getNom());
+        }
+
         transaction.commit();
 
     }
