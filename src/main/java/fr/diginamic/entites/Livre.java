@@ -15,8 +15,8 @@ public class Livre
     private String auteur;
     @ManyToMany
     @JoinTable(name="compo",
-            joinColumns = @JoinColumn(name="ID_EMP", referencedColumnName="ID"),
-            inverseJoinColumns = @JoinColumn(name="ID_LIV", referencedColumnName="ID"))
+            joinColumns = @JoinColumn(name="ID_LIV", referencedColumnName="ID"),
+            inverseJoinColumns = @JoinColumn(name="ID_EMP", referencedColumnName="ID"))
     private Set<Emprunt> emprunts;
 
     public String getTitre() { return this.titre; }
