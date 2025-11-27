@@ -2,7 +2,11 @@ package fr.diginamic;
 
 import fr.diginamic.entites.Region;
 
-import javax.persistence.*;
+import javax.persistence.TypedQuery;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+import javax.persistence.EntityTransaction;
 
 public class ConnexionJpa
 {
