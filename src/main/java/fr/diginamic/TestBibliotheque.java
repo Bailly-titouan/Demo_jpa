@@ -19,8 +19,13 @@ public class TestBibliotheque
 
         transaction.begin();
 
-        Emprunt emprunt = em.find(Emprunt.class, 5);
+        Emprunt emprunt = em.find(Emprunt.class, 1);
         System.out.println(emprunt);
+
+        for (Livre livre : emprunt.getLivres())
+        {
+            System.out.println("- " + livre.getTitre());
+        }
 
         transaction.commit();
 

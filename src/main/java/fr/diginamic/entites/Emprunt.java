@@ -36,11 +36,13 @@ public class Emprunt
     public Date getDateDebut() {return this.dateDebut; }
     public Date getDateFin() {return this.dateFin; }
     public Client getClient() {return this.client; }
+    public Set<Livre> getLivres() {return this.livres;}
 
     public void setId(int id) {this.id = id;}
     public void setDateDebut(Date date) {this.dateDebut = date;}
     public void setDateFin(Date date) {this.dateFin = date;}
     public void setClient(Client client) {this.client = client;}
+    public void setLivres(Set<Livre> livres) {this.livres = livres;}
 
     public Emprunt()
     {
