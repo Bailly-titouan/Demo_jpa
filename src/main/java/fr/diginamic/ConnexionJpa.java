@@ -18,7 +18,7 @@ public class ConnexionJpa
 
         transaction.begin();
 
-        TypedQuery<Region> query = em.createQuery("SELECT h FROM Region h", Region.class);
+        TypedQuery<Region> query = em.createQuery("FROM Region", Region.class);
 
         for (Region region : query.getResultList())
         {
