@@ -9,7 +9,6 @@ import java.util.Set;
 public class Livre
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String titre;
     private String auteur;
